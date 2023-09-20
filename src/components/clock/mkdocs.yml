@@ -1,0 +1,24 @@
+site_name: Clock
+use_directory_urls: true
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+
+nav:
+  - Clock:
+    - index.md
+    - './*'
+
+plugins:
+  - literate-nav
+  - gen-files:
+      scripts:
+        - ../../../gen_doc_stubs.py
+  - mkdocstrings:
+      default_handler: crystal
+      handlers:
+        crystal:
+          crystal_docs_flags:
+            - ./src/components/clock/src/clock.cr

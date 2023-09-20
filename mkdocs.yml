@@ -1,0 +1,19 @@
+site_name: Athena
+use_directory_urls: true
+
+theme:
+  name: material
+  features:
+    - navigation.indexes
+
+plugins:
+  - projects:
+      projects_dir: src/components
+      cache: false
+
+nav:
+  - Manual: index.md
+  - Components:
+    - components.md
+    - project://clock
+    # - project://dotenv
